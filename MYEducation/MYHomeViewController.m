@@ -8,6 +8,7 @@
 
 #import "MYHomeViewController.h"
 #import "MYDock.h"
+#import "Masonry.h"
 
 
 @interface MYHomeViewController ()
@@ -70,12 +71,28 @@
     
     ///显示当前index对应的控制器
     UIViewController *newChildVC = self.childViewControllers[index];
-    newChildVC.view.y = 0;
-    newChildVC.view.x = self.dock.width;//MYDockLW;
-    newChildVC.view.height = self.view.height;
-    newChildVC.view.width = 600;
+//    newChildVC.view.y = 0;
+//    newChildVC.view.x = self.dock.width;//MYDockLW;
+//    newChildVC.view.height = self.view.height;
+//    newChildVC.view.width = 600;
+    
+    
+    ///先添加视图,在约束!
     [self.view addSubview:newChildVC.view];
     self.showingVC = newChildVC;
+    
+    ///使用masonry
+    [newChildVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.width.mas_equalTo(600);   // make.width.equalTo(@600);
+        make.right.equalTo(self.view.mas_right);
+        make.top.equalTo(self.view.mas_top);//make.top.equalTo(self.view);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.left.equalTo(self.dock.mas_right);
+        
+    }];
+//    除了masonry,还可以使用更为轻量级的框架:
+//    UIView+Autolayout.h
+//    UIView+Autolayout.m
 }
 
 
@@ -92,13 +109,17 @@
         self.dock.height = MYScreenLW;
 //        NSLog(@"竖屏");
     }
-        self.showingVC.view.autoresizingMask = UIViewAutoresizingNone;
-        self.showingVC.view.x = self.dock.width;
-        self.showingVC.view.width = 600;
-        self.showingVC.view.y = 0;
-        self.showingVC.view.height = self.dock.height;
+    
+    /////**没有使用masonry时候的约束右边子控制器*//
+    /*
+//        self.showingVC.view.autoresizingMask = UIViewAutoresizingNone;
+//        self.showingVC.view.x = self.dock.width;
+//        self.showingVC.view.width = 600;
+//        self.showingVC.view.y = 0;
+//        self.showingVC.view.height = self.dock.height;
     //默认情况下,所有控制器的view.autoresizingMask都包括了 UIViewAutoresizingFlexibleHeight 和 UIViewAutoresizingFlexibleWidth
     //默认情况下所有控制器的宽高都会跟随父控制器而改
+     */
 }
 
 
