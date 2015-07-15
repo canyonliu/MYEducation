@@ -27,6 +27,7 @@
         //self.backgroundColor = [UIColor redColor];
 //        1.设置头像
         MYHeadView *headview = [[MYHeadView alloc]init];
+       // headview.backgroundColor = [UIColor blueColor];
         [self addSubview:headview];
         self.headView = headview;
         
@@ -53,16 +54,30 @@
     
     
     self.tabBar.width = self.width;
+    self.tabBar.height = MYDockPW * self.tabBar.subviews.count;
     self.toorBar.width = self.width;
     
     
     if (IsLanScape) {
 //        NSLog(@"横屏");
-        self.tabBar.height = self.width *3;  //self.tabBar.subviews.count;
+
+        self.headView.width = self.width /7 * 3;
+        self.headView.height = self.headView.width;
+        self.headView.x = (self.width - self.headView.width) * 0.5;
+        self.headView.y = 60;
+        //self.tabBar.height = self.width *3;  //self.tabBar.subviews.count;
+        
         self.toorBar.height = self.width/self.toorBar.subviews.count;
     }else{
 //         NSLog(@"竖屏");
-        self.tabBar.height = self.width * 6;
+        
+        self.headView.x = 5;
+        self.headView.y = 50;
+        self.headView.width = self.width- 2 * self.headView.x;
+        self.headView.height = self.headView.width;
+        
+        //self.tabBar.height = self.width * 6;
+        
         self.toorBar.height = self.width*self.toorBar.subviews.count;
     }
     self.tabBar.y = self.height - self.toorBar.height - self.tabBar.height;

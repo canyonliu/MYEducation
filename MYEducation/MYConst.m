@@ -7,7 +7,7 @@
 //
 
 
-const CGFloat MYDockPW = 50;
+const CGFloat MYDockPW = 65;
 //dock横屏时候的宽度
 const CGFloat MYDockLW = MYDockPW *3;
 //屏幕竖屏时候的宽度

@@ -29,14 +29,14 @@
     [button setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:highlightedImage] forState:UIControlStateHighlighted];
     [button setTitle:title forState:UIControlStateNormal];
-//    [button setBackgroundImage:[UIImage imageNamed:@"tabbar_separate_selected_bg"] forState:UIControlStateHighlighted];
-    
+//    [button setBackgroundImage:[UIImage imageNamed:@"tabbar_separate_selected_bg"] forState:UIControlStateDisabled];
+//    
     //设置按钮的内容左边对齐
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     //设置内边距
     CGFloat inset = 10;
     button.contentEdgeInsets = UIEdgeInsetsMake(0, inset, 0, 0);
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, inset, 0, 0);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0, inset*2, 0, 0);
     [self addSubview:button];
 }
 
