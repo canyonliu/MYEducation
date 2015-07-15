@@ -8,10 +8,21 @@
 ///底部的工具条
 
 #import "MYTabBar.h"
+#import "MYTabBarButton.h"
+@interface MYTabBar()
+@property (nonatomic ,weak) MYTabBarButton  *selectedTabbarButton;
+
+@end
 
 @implementation MYTabBar
 -(instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){
+        
+        
+        // 创建按钮
+        MYTabBarButton *firstButton = [self setupButton:@"mycourse" andHightlightedImage:@"mycourse_pressed" andTitle:@"我的课程"];
+        firstButton.enabled = NO;
+        self.selectedTabbarButton = firstButton;
         //创建按钮
         [self setupButton:@"mycourse" andHightlightedImage:@"mycourse_pressed" andTitle:@"我的课程"];
         [self setupButton:@"course" andHightlightedImage:@"course_pressed" andTitle:@"课程"];
@@ -24,31 +35,39 @@
     
 }
 
--(void)setupButton:(NSString *)icon andHightlightedImage:(NSString *)highlightedImage  andTitle:(NSString *)title{
-    UIButton *button = [[UIButton alloc]init];
+-(MYTabBarButton *)setupButton:(NSString *)icon andHightlightedImage:(NSString *)highlightedImage  andTitle:(NSString *)title{
+    MYTabBarButton *button = [[MYTabBarButton alloc]init];
     [button setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:highlightedImage] forState:UIControlStateHighlighted];
     [button setTitle:title forState:UIControlStateNormal];
-//    [button setBackgroundImage:[UIImage imageNamed:@"tabbar_separate_selected_bg"] forState:UIControlStateDisabled];
-//    
-    //设置按钮的内容左边对齐
-    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    //设置内边距
-    CGFloat inset = 10;
-    button.contentEdgeInsets = UIEdgeInsetsMake(0, inset, 0, 0);
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, inset*2, 0, 0);
+//添加按钮事件
+    [button addTarget:self action:@selector(tabbarButtonClick:) forControlEvents:UIControlEventTouchDown];
     [self addSubview:button];
+    return  button;
 }
+
+-(void)tabbarButtonClick:(MYTabBarButton *)tabbutton{
+    self.selectedTabbarButton.enabled = YES;
+    tabbutton.enabled = NO; // 按钮button 如果进入高亮状态/disasble,图标默认会变灰
+    self.selectedTabbarButton = tabbutton;
+    
+    //发出通知
+    
+}
+
+
+
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     int count  = self.subviews.count;
-//    if (IsLanScape) {
+    
+//        if (IsLanScape) {
 //    
-//    }
+//        }
 
         for (int i = 0; i < count; i++) {
-            UIButton *button = self.subviews[i];
+            MYTabBarButton *button = self.subviews[i];
             button.height = self.height/count;
             button.width = self.width ;
             button.y = button.height *i;

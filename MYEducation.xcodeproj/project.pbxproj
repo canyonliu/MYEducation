@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B62E3F11B567EC700292C5D /* MYTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B62E3F01B567EC700292C5D /* MYTabBarButton.m */; };
 		9B91033F1B5628F300AA4FE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B91033E1B5628F300AA4FE4 /* main.m */; };
 		9B9103421B5628F300AA4FE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103411B5628F300AA4FE4 /* AppDelegate.m */; };
 		9B9103481B5628F300AA4FE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9103461B5628F300AA4FE4 /* Main.storyboard */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B62E3EF1B567EC700292C5D /* MYTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTabBarButton.h; sourceTree = "<group>"; };
+		9B62E3F01B567EC700292C5D /* MYTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTabBarButton.m; sourceTree = "<group>"; };
 		9B9103391B5628F300AA4FE4 /* MYEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91033D1B5628F300AA4FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B91033E1B5628F300AA4FE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				9B91037A1B565C8700AA4FE4 /* MYHeadView.m */,
 				9B91036D1B56520A00AA4FE4 /* MYTabBar.h */,
 				9B91036E1B56520A00AA4FE4 /* MYTabBar.m */,
+				9B62E3EF1B567EC700292C5D /* MYTabBarButton.h */,
+				9B62E3F01B567EC700292C5D /* MYTabBarButton.m */,
 				9B91036A1B5651F300AA4FE4 /* MYToorBar.h */,
 				9B91036B1B5651F300AA4FE4 /* MYToorBar.m */,
 				9B9103631B56505F00AA4FE4 /* MYConst.h */,
@@ -259,6 +264,7 @@
 				9B91036F1B56520A00AA4FE4 /* MYTabBar.m in Sources */,
 				9B91033F1B5628F300AA4FE4 /* main.m in Sources */,
 				9B91037B1B565C8700AA4FE4 /* MYHeadView.m in Sources */,
+				9B62E3F11B567EC700292C5D /* MYTabBarButton.m in Sources */,
 				9B9103781B5653BA00AA4FE4 /* UIView+Extension.m in Sources */,
 				9B91036C1B5651F300AA4FE4 /* MYToorBar.m in Sources */,
 			);
