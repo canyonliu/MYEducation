@@ -19,6 +19,7 @@
 		9B91036F1B56520A00AA4FE4 /* MYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B91036E1B56520A00AA4FE4 /* MYTabBar.m */; };
 		9B9103751B56525A00AA4FE4 /* MYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103741B56525A00AA4FE4 /* MYHomeViewController.m */; };
 		9B9103781B5653BA00AA4FE4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103771B5653BA00AA4FE4 /* UIView+Extension.m */; };
+		9B91037B1B565C8700AA4FE4 /* MYHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B91037A1B565C8700AA4FE4 /* MYHeadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		9B9103741B56525A00AA4FE4 /* MYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHomeViewController.m; sourceTree = "<group>"; };
 		9B9103761B5653BA00AA4FE4 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "MYEducation/UIView+Extension.h"; sourceTree = "<group>"; };
 		9B9103771B5653BA00AA4FE4 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "MYEducation/UIView+Extension.m"; sourceTree = "<group>"; };
+		9B9103791B565C8700AA4FE4 /* MYHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHeadView.h; sourceTree = "<group>"; };
+		9B91037A1B565C8700AA4FE4 /* MYHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHeadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +108,14 @@
 				9B9103741B56525A00AA4FE4 /* MYHomeViewController.m */,
 				9B9103661B5651B100AA4FE4 /* MYDock.h */,
 				9B9103671B5651B100AA4FE4 /* MYDock.m */,
-				9B9103631B56505F00AA4FE4 /* MYConst.h */,
-				9B9103641B56505F00AA4FE4 /* MYConst.m */,
-				9B91036A1B5651F300AA4FE4 /* MYToorBar.h */,
-				9B91036B1B5651F300AA4FE4 /* MYToorBar.m */,
+				9B9103791B565C8700AA4FE4 /* MYHeadView.h */,
+				9B91037A1B565C8700AA4FE4 /* MYHeadView.m */,
 				9B91036D1B56520A00AA4FE4 /* MYTabBar.h */,
 				9B91036E1B56520A00AA4FE4 /* MYTabBar.m */,
+				9B91036A1B5651F300AA4FE4 /* MYToorBar.h */,
+				9B91036B1B5651F300AA4FE4 /* MYToorBar.m */,
+				9B9103631B56505F00AA4FE4 /* MYConst.h */,
+				9B9103641B56505F00AA4FE4 /* MYConst.m */,
 				9B9103621B56501400AA4FE4 /* MYEducation.pch */,
 				9B91033C1B5628F300AA4FE4 /* Supporting Files */,
 			);
@@ -253,6 +258,7 @@
 				9B9103751B56525A00AA4FE4 /* MYHomeViewController.m in Sources */,
 				9B91036F1B56520A00AA4FE4 /* MYTabBar.m in Sources */,
 				9B91033F1B5628F300AA4FE4 /* main.m in Sources */,
+				9B91037B1B565C8700AA4FE4 /* MYHeadView.m in Sources */,
 				9B9103781B5653BA00AA4FE4 /* UIView+Extension.m in Sources */,
 				9B91036C1B5651F300AA4FE4 /* MYToorBar.m in Sources */,
 			);

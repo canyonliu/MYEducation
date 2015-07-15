@@ -8,14 +8,6 @@
 
 #import "MYHomeViewController.h"
 #import "MYDock.h"
-//dock竖屏时候的宽度
-const CGFloat MYDockPW = 70;
-//dock横屏时候的宽度
-const CGFloat MYDockLW = MYDockPW *3;
-
-const CGFloat MYScreenW = 768;
-
-const CGFloat MYScreenH = 1024;
 
 
 @interface MYHomeViewController ()
@@ -32,6 +24,8 @@ const CGFloat MYScreenH = 1024;
 //    dock.width = 150;
 //    dock.height = self.view.height;
     
+    self.view.backgroundColor = [UIColor colorWithRed:55/255.0 green:55/255.0  blue:55/255.0  alpha:1.0];
+    
     [self.view addSubview:dock];
     self.dock =dock;
     
@@ -43,12 +37,12 @@ const CGFloat MYScreenH = 1024;
     if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation)==YES){
 //        NSLog(@"横屏");
         self.dock.width = MYDockLW;
-        self.dock.height = MYScreenW;
+        self.dock.height = MYScreenPW;
         
     }
     else{
-        self.dock.height = MYDockPW;
-        self.dock.height = MYScreenH;
+        self.dock.width = MYDockPW;
+        self.dock.height = MYScreenLW;
 //        NSLog(@"竖屏");
     }
 }

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MYDock : UIButton
+@interface MYDock : UIView
 
 @end
