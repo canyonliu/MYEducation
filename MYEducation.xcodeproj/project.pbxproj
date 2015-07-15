@@ -13,6 +13,12 @@
 		9B91034A1B5628F300AA4FE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9103491B5628F300AA4FE4 /* Images.xcassets */; };
 		9B91034D1B5628F300AA4FE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B91034B1B5628F300AA4FE4 /* LaunchScreen.xib */; };
 		9B9103591B5628F300AA4FE4 /* MYEducationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103581B5628F300AA4FE4 /* MYEducationTests.m */; };
+		9B9103651B56505F00AA4FE4 /* MYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103641B56505F00AA4FE4 /* MYConst.m */; };
+		9B9103681B5651B100AA4FE4 /* MYDock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103671B5651B100AA4FE4 /* MYDock.m */; };
+		9B91036C1B5651F300AA4FE4 /* MYToorBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B91036B1B5651F300AA4FE4 /* MYToorBar.m */; };
+		9B91036F1B56520A00AA4FE4 /* MYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B91036E1B56520A00AA4FE4 /* MYTabBar.m */; };
+		9B9103751B56525A00AA4FE4 /* MYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103741B56525A00AA4FE4 /* MYHomeViewController.m */; };
+		9B9103781B5653BA00AA4FE4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9103771B5653BA00AA4FE4 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,19 @@
 		9B9103521B5628F300AA4FE4 /* MYEducationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYEducationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9103571B5628F300AA4FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B9103581B5628F300AA4FE4 /* MYEducationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYEducationTests.m; sourceTree = "<group>"; };
+		9B9103621B56501400AA4FE4 /* MYEducation.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYEducation.pch; sourceTree = "<group>"; };
+		9B9103631B56505F00AA4FE4 /* MYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYConst.h; sourceTree = "<group>"; };
+		9B9103641B56505F00AA4FE4 /* MYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYConst.m; sourceTree = "<group>"; };
+		9B9103661B5651B100AA4FE4 /* MYDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYDock.h; sourceTree = "<group>"; };
+		9B9103671B5651B100AA4FE4 /* MYDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYDock.m; sourceTree = "<group>"; };
+		9B91036A1B5651F300AA4FE4 /* MYToorBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYToorBar.h; sourceTree = "<group>"; };
+		9B91036B1B5651F300AA4FE4 /* MYToorBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYToorBar.m; sourceTree = "<group>"; };
+		9B91036D1B56520A00AA4FE4 /* MYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTabBar.h; sourceTree = "<group>"; };
+		9B91036E1B56520A00AA4FE4 /* MYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTabBar.m; sourceTree = "<group>"; };
+		9B9103731B56525A00AA4FE4 /* MYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHomeViewController.h; sourceTree = "<group>"; };
+		9B9103741B56525A00AA4FE4 /* MYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHomeViewController.m; sourceTree = "<group>"; };
+		9B9103761B5653BA00AA4FE4 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "MYEducation/UIView+Extension.h"; sourceTree = "<group>"; };
+		9B9103771B5653BA00AA4FE4 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "MYEducation/UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				9B91033B1B5628F300AA4FE4 /* MYEducation */,
+				9B9103761B5653BA00AA4FE4 /* UIView+Extension.h */,
+				9B9103771B5653BA00AA4FE4 /* UIView+Extension.m */,
 				9B9103551B5628F300AA4FE4 /* MYEducationTests */,
 				9B91033A1B5628F300AA4FE4 /* Products */,
 			);
@@ -80,9 +101,17 @@
 			children = (
 				9B9103401B5628F300AA4FE4 /* AppDelegate.h */,
 				9B9103411B5628F300AA4FE4 /* AppDelegate.m */,
-				9B9103461B5628F300AA4FE4 /* Main.storyboard */,
-				9B9103491B5628F300AA4FE4 /* Images.xcassets */,
-				9B91034B1B5628F300AA4FE4 /* LaunchScreen.xib */,
+				9B9103731B56525A00AA4FE4 /* MYHomeViewController.h */,
+				9B9103741B56525A00AA4FE4 /* MYHomeViewController.m */,
+				9B9103661B5651B100AA4FE4 /* MYDock.h */,
+				9B9103671B5651B100AA4FE4 /* MYDock.m */,
+				9B9103631B56505F00AA4FE4 /* MYConst.h */,
+				9B9103641B56505F00AA4FE4 /* MYConst.m */,
+				9B91036A1B5651F300AA4FE4 /* MYToorBar.h */,
+				9B91036B1B5651F300AA4FE4 /* MYToorBar.m */,
+				9B91036D1B56520A00AA4FE4 /* MYTabBar.h */,
+				9B91036E1B56520A00AA4FE4 /* MYTabBar.m */,
+				9B9103621B56501400AA4FE4 /* MYEducation.pch */,
 				9B91033C1B5628F300AA4FE4 /* Supporting Files */,
 			);
 			path = MYEducation;
@@ -91,6 +120,9 @@
 		9B91033C1B5628F300AA4FE4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B9103461B5628F300AA4FE4 /* Main.storyboard */,
+				9B9103491B5628F300AA4FE4 /* Images.xcassets */,
+				9B91034B1B5628F300AA4FE4 /* LaunchScreen.xib */,
 				9B91033D1B5628F300AA4FE4 /* Info.plist */,
 				9B91033E1B5628F300AA4FE4 /* main.m */,
 			);
@@ -216,7 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B9103421B5628F300AA4FE4 /* AppDelegate.m in Sources */,
+				9B9103651B56505F00AA4FE4 /* MYConst.m in Sources */,
+				9B9103681B5651B100AA4FE4 /* MYDock.m in Sources */,
+				9B9103751B56525A00AA4FE4 /* MYHomeViewController.m in Sources */,
+				9B91036F1B56520A00AA4FE4 /* MYTabBar.m in Sources */,
 				9B91033F1B5628F300AA4FE4 /* main.m in Sources */,
+				9B9103781B5653BA00AA4FE4 /* UIView+Extension.m in Sources */,
+				9B91036C1B5651F300AA4FE4 /* MYToorBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = MYEducation/MYEducation.pch;
 				INFOPLIST_FILE = MYEducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = MYEducation/MYEducation.pch;
 				INFOPLIST_FILE = MYEducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,6 +453,7 @@
 				9B91035E1B5628F300AA4FE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B91035F1B5628F300AA4FE4 /* Build configuration list for PBXNativeTarget "MYEducationTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +462,7 @@
 				9B9103611B5628F300AA4FE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
