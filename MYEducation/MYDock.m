@@ -32,6 +32,7 @@
         
 //        2.tabbar选项卡
         MYTabBar *tabbar = [[MYTabBar alloc]init];
+        //tabbar.backgroundColor = [UIColor blueColor];
         [self addSubview:tabbar];
         self.tabBar = tabbar;
         
@@ -50,16 +51,21 @@
 {
     [super layoutSubviews];
     
+    
+    self.tabBar.width = self.width;
     self.toorBar.width = self.width;
     
     
     if (IsLanScape) {
 //        NSLog(@"横屏");
-        self.toorBar.height = self.width/3;
+        self.tabBar.height = self.width *3;  //self.tabBar.subviews.count;
+        self.toorBar.height = self.width/self.toorBar.subviews.count;
     }else{
 //         NSLog(@"竖屏");
-        self.toorBar.height = self.width*3;
+        self.tabBar.height = self.width * 6;
+        self.toorBar.height = self.width*self.toorBar.subviews.count;
     }
+    self.tabBar.y = self.height - self.toorBar.height - self.tabBar.height;
     self.toorBar.y = self.height - self.toorBar.height;
 }
 
