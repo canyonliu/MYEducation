@@ -48,6 +48,7 @@
             button.x = 0;
             button.y = button.height *i;
         }
+        
  
         
     }

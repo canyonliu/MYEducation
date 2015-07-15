@@ -24,7 +24,7 @@
         firstButton.enabled = NO;
         self.selectedTabbarButton = firstButton;
         //创建按钮
-        [self setupButton:@"mycourse" andHightlightedImage:@"mycourse_pressed" andTitle:@"我的课程"];
+//        [self setupButton:@"mycourse" andHightlightedImage:@"mycourse_pressed" andTitle:@"我的课程"];
         [self setupButton:@"course" andHightlightedImage:@"course_pressed" andTitle:@"课程"];
         [self setupButton:@"discuss" andHightlightedImage:@"discuss_pressed" andTitle:@"讨论"];
         [self setupButton:@"mydiscuss" andHightlightedImage:@"mydiscuss_pressed" andTitle:@"我的讨论"];
@@ -52,7 +52,7 @@
     self.selectedTabbarButton = tabbutton;
     
     //发出通知
-    
+    [[NSNotificationCenter defaultCenter]postNotificationName:MYTabBarDidSelectedNotification   object:nil userInfo:@{MYTabBarSelectedIndex : @(tabbutton.tag)}];
 }
 
 
@@ -72,6 +72,7 @@
             button.width = self.width ;
             button.y = button.height *i;
             button.x = 0;
+            button.tag = i;
         }
 
         

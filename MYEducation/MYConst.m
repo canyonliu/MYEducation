@@ -15,3 +15,5 @@ const CGFloat MYScreenPW = 768;
 //屏幕横屏时候的宽度
 const CGFloat MYScreenLW = 1024;
 
+NSString *const MYTabBarDidSelectedNotification = @"MYTabBarDidSelectedNotification";
+NSString *const MYTabBarSelectedIndex = @"MYTabBarSelectedIndex";
