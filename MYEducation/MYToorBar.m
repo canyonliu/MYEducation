@@ -21,6 +21,7 @@
     
 }
 
+
 -(void)setupButton:(NSString *)icon{
     UIButton *button = [[UIButton alloc]init];
     [button setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];

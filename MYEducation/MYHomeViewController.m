@@ -25,34 +25,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ///初始化MyDock
-    [self setupDock];
-   ///初始化子控制器
+    ///初始化子控制器
     [self setupChildVCs];
-    
     self.view.backgroundColor = MYColor(55, 55, 55);
     
     [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
     
-    
     //监听通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(tabbarChanged:) name:MYTabBarDidSelectedNotification object:nil];
-    
+   
+
 }
+
+///懒加载
+-(MYDock *)dock{
+    if(!_dock){
+        MYDock *dock = [[MYDock alloc]init];
+        [self.view addSubview:dock];
+        self.dock = dock;
+    }
+    return _dock;
+}
+
+
+
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 ///初始化MyDock
--(void)setupDock{
-    
-    MYDock *dock = [[MYDock alloc]init];
-    //    dock.width = 150;
-    //    dock.height = self.view.height;
-    [self.view addSubview:dock];
-    self.dock =dock;
-    
-}
+//-(void)setupDock{
+//    
+//    MYDock *dock = [[MYDock alloc]init];
+//    //    dock.width = 150;
+//    //    dock.height = self.view.height;
+//    [self.view addSubview:dock];
+//    self.dock =dock;
+//    
+//}
 ///初始化子控制器
 -(void)setupChildVCs{
     for (int i = 0; i < 6 ; i++) {
@@ -60,21 +70,25 @@
         VC1.view.backgroundColor = MYRandomColor;
         [self addChildViewController:VC1];
     }
- 
+  [self switchChildVC:0];
 }
 
 -(void)tabbarChanged:(NSNotification *)notification{
     int index = [notification.userInfo[MYTabBarSelectedIndex]intValue];
-    
+    [self switchChildVC:index];
+
+}
+
+-(void)switchChildVC:(int )index{
     ///移除当前正在显示的控制器,换成下面的那个
     [self.showingVC.view removeFromSuperview];
     
     ///显示当前index对应的控制器
     UIViewController *newChildVC = self.childViewControllers[index];
-//    newChildVC.view.y = 0;
-//    newChildVC.view.x = self.dock.width;//MYDockLW;
-//    newChildVC.view.height = self.view.height;
-//    newChildVC.view.width = 600;
+    //    newChildVC.view.y = 0;
+    //    newChildVC.view.x = self.dock.width;//MYDockLW;
+    //    newChildVC.view.height = self.view.height;
+    //    newChildVC.view.width = 600;
     
     
     ///先添加视图,在约束!
@@ -90,9 +104,9 @@
         make.left.equalTo(self.dock.mas_right);
         
     }];
-//    除了masonry,还可以使用更为轻量级的框架:
-//    UIView+Autolayout.h
-//    UIView+Autolayout.m
+    //    除了masonry,还可以使用更为轻量级的框架:
+    //    UIView+Autolayout.h
+    //    UIView+Autolayout.m
 }
 
 
