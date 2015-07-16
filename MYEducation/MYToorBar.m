@@ -7,6 +7,8 @@
 //
 
 #import "MYToorBar.h"
+#import "UIView+Extension.h"
+#import "Const.h"
 
 @implementation MYToorBar
 
@@ -20,6 +22,7 @@
     return self;
     
 }
+
 
 -(void)setupButton:(NSString *)icon{
     UIButton *button = [[UIButton alloc]init];
